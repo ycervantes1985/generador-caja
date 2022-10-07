@@ -1,5 +1,17 @@
-.App {
-  text-align: center;
+
+.App{
+margin-left: 450px;
+margin-top: 80px;
+
+}
+
+.card{
+display: inline-block;
+margin-left: 15px;
+margin-top: 15px;
+border-radius: 25px;
+
+
 }
 
 .App-logo {
