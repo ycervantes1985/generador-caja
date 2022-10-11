@@ -19,23 +19,31 @@ function Form({colors, setColors}) {
             ...color,
             [event.target.name] : event.target.value
         })
+
+        
     }
+
+    const resetForms = () => { document.getElementById("myform").reset(); }
 
     const enviarDatos = (event) => {
         event.preventDefault()
         setColors([color, ...colors]);
         console.log(color);
+        resetForms();
         
     }
+
+    
+
 
 
 return (
     <>
     <div>
-        <form onSubmit={enviarDatos}>
-        <label htmlFor="">Color</label>
-        <input type={"text"} name="color" onChange={handleInputChange}></input>
-        <button type="submit">Add</button>
+        <form id='myform' onSubmit={enviarDatos}>
+            <label htmlFor="">Color</label>
+            <input type={"text"} name="color" onChange={handleInputChange}></input>
+            <button type="submit">Add</button>
         </form>
     </div>
     
